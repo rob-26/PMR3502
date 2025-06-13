@@ -15,8 +15,8 @@ class KalmanFilter(object):
         self._t = t0  # instante inicial
 
         # Parâmetros do filtro    refazer os comentários
-        self._sigma_omega = incerteza0  # variância do giroscópio (rad²/s²)
-        self._sigma_theta = 0.05  # variância do magnetômetro (rad²)
+        self._sigma_omega = incerteza0  
+        self._sigma_theta = 0.05  
         self._Q = self._sigma_theta  # ruído de medida do magnetômetro    ### renomear
 
         ## Etapa de predição 
@@ -67,6 +67,8 @@ class KalmanFilter(object):
         
         return self._mu
 
+'''
+Valores para testes!
 
 KF = KalmanFilter(100, 0, 0, 0.0386)
 
@@ -82,7 +84,7 @@ for i in range(16):
 
     print("Valor previsto:" , x_pred, y_pred)
     print("Valor intermediário:", x_up, y_up)
-
+'''
 
 
 
